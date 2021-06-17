@@ -1,0 +1,37 @@
+.recomended{
+    color: white;
+    font-size: 25px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-weight: 200;
+}
+
+.recomended-content{
+    color: white;
+    width: 200px;
+    margin-bottom: 30px;
+}
+.recomended-content:hover{
+    cursor: pointer;
+   
+}
+.recomended-content img {
+    height: 220px;
+    box-shadow: 5px 5px  15px 5px rgba(0, 0, 0, 0.226)   ;
+    min-width: 160px;
+    border-radius: 3px;
+}
+.recomended-content p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.recomended-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.container-recomended-master{
+    margin-left: 60px;
+}

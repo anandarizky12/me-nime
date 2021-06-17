@@ -1,0 +1,50 @@
+.Left-nav{
+    
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    min-height: 110vh;
+    background: rgb(46, 46, 46);
+    color: rgb(153, 153, 153);
+    font-weight: 400;
+    box-sizing: border-box;
+  
+}
+.main-left{
+    margin-top: 25px;
+}
+.each-nav-title{
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    height: 30px;
+    padding: 10px;
+    padding-left: 25px;
+    text-decoration: none;
+    color: rgb(139, 139, 139);
+}
+.each-nav-title:hover{
+ 
+    cursor: pointer;
+    color:  rgb(235, 69, 69);
+}
+.each-nav-title.active{
+    background: rgb(59, 59, 59);
+    cursor: pointer;
+    color:  rgb(235, 69, 69);
+    font-weight: 700;
+}
+.underline{
+    height: 1px;
+    width: 85%;
+    background: rgb(77, 77, 77);
+}
+.center-line{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+   
+}

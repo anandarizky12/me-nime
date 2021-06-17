@@ -1,0 +1,121 @@
+.navbar{
+    background-color: rgb(235, 69, 69);
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    height: 45px;
+   
+    
+}
+
+
+.Logo{
+  
+    font-weight: 500;
+    width: 300px;
+    background-color: rgb(235, 69, 69);
+    position: relative;
+}
+.Pa{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.for-searchandusername{
+    background-color: rgb(247, 77, 77);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 20px 0px 20px ;
+    align-items: center;
+}
+.Search{
+    background:none;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+input::placeholder{
+    color: rgb(236, 236, 236);
+    font-weight: 100;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 0.5px;
+  }
+
+.Search input{
+    background: none;
+    outline: none;
+    border: none;
+    color: white;
+    margin-left: 1px;
+    width: 250px;
+}
+.search-logo{
+    width: 16px;
+
+}
+.search-logo:hover{
+  cursor: pointer;
+    
+}
+.User{
+    font-size: 12px;
+    color: white;
+    display: flex;
+    font-weight: 500;
+    align-items: center;
+    justify-content: space-around;
+}
+.User img{
+    width: 28px;
+    margin-left:5px;
+    border-radius: 50%;
+    height: 28px;
+}
+.search-r{
+ 
+    position: absolute;
+    top: 45px;
+    margin-left: -20px;
+    width: 350px;
+    background-color: rgba(24, 24, 24, 0.877);
+   
+}
+.search-r p{
+    font-size: 14px;
+    margin-left: 10px;
+    font-weight: 200;
+   
+}
+
+.search-r img{
+    height: 80px;
+    min-width: 60px;
+    max-width: 60px;
+}
+.ctn{
+   padding: 5px;
+   display: flex;
+   
+}
+.seeall{
+    padding-top: 5px;
+    margin-right: 8px;
+    padding-bottom: 6px;
+    text-align: center;
+    color:  rgb(235, 69, 69);
+}
+.seeall:hover{
+    cursor: pointer;
+    color: tomato;
+  
+}
+.ctn:hover{
+    cursor: pointer;
+    background-color: rgba(247, 77, 77, 0.281);
+    transition: all ease 0.5s;
+}
