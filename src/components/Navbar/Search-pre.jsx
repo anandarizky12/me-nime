@@ -13,7 +13,8 @@ function Searchpre({img,title,score,rated,date}) {
         <div className="ctn">
             <img src={img} alt="" />
             <div className="flex-search">
-                    <p>{threedot(title,20)} ({rated} {date.slice(0,4)})</p>
+                    <p>{threedot(title,35)}</p>
+                    <p> ({rated} - {date.slice(0,4)})</p>
                     <p>⭐{score}</p>
             </div>
           

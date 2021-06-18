@@ -37,18 +37,24 @@ function Navbar() {
                     <div className="for-searchandusername">
                         <div className="Search">
                             <SearchIcon className="search-logo" />
-                            <input value={search} onChange={(e)=>setsearch(e.target.value)} type="text" placeholder="Search Movies" /> 
-                            {search.length > 0 && 
+                            <input value={search} onChange={(e)=>setsearch(e.target.value)} type="text" placeholder="Search Anime" /> 
+                            {search.length > 0 &&
                                 <>
                                  <div className="search-r">
-                                        {searchResult && searchResult.slice(0,5).map(data=>(
+                                        {searchResult ? searchResult.slice(0,5).map(data=>(
                                             <Searchpre img={data.image_url} rated={data.rated} date={data.start_date} title={data.title} score={data.score}  />
-                                        ))}
+                                        ))
+                                    :
+                                    <p>Searching . . . </p>
+                                    
+                                    }
                                           <p className="seeall">See All Result</p>
 
                                  </div>
                                  <XIcon onClick={()=>setsearch('')} className="search-logo"/>
                                  </>
+                                
+                               
                                
                             }
                           

@@ -1,5 +1,5 @@
 .navbar{
-    background-color: rgb(235, 69, 69);
+    background-color: rgb(241, 21, 21);
     display: flex;
     align-items: center;
     flex-direction: row;
@@ -13,7 +13,6 @@
   
     font-weight: 500;
     width: 300px;
-    background-color: rgb(235, 69, 69);
     position: relative;
 }
 .Pa{
@@ -23,7 +22,7 @@
     color: white;
 }
 .for-searchandusername{
-    background-color: rgb(247, 77, 77);
+    background-color: rgb(255, 59, 59);
     width: 100%;
     height: 100%;
     display: flex;
@@ -52,7 +51,7 @@ input::placeholder{
     border: none;
     color: white;
     margin-left: 1px;
-    width: 250px;
+    width: 270px;
 }
 .search-logo{
     width: 16px;

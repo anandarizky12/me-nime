@@ -1,25 +1,38 @@
-import React,{useEffect} from 'react'
-import {getPosts,searchPosts} from '../../actions/index';
+import React, { useEffect, useState } from 'react'
+import { getPosts } from '../../actions/index';
 import {useDispatch,useSelector} from 'react-redux';
 import Content from './Content';
 
+import PaginationFix from '../Pagination/Pagination';
+
 function Recomended() {
+
+    const [postsPerPage] = useState(10);
+    const [currentPage, setCurrentPage] = useState(1);
+
+    //get data from store
     const dispatch = useDispatch();
- 
+
     useEffect(() => {
+        //get recomendation anime '''
+      dispatch(getPosts('anime/1/recommendations')); 
 
-      dispatch(getPosts());     
-      
-    }, []);
+    }, [dispatch]);
 
+    //post data
     const posts = useSelector((state) => state.posts);
-    console.log(posts.recommendations)
+    const postRe = posts.recommendations
+    //for pagination purpose
+    const indexOfLastPost = currentPage * postsPerPage;
+    const indexOfFirstPost = indexOfLastPost - postsPerPage;
+    // const totalpagination = postRe.length / postsPerPage;
+   
     return (
         <div className='container-recomended-master'>
             <p className="recomended">Recomended Anime</p>
-            
             <div className="recomended-container">
-                    {posts.recommendations && posts.recommendations.slice(0,10).map((data,i)=>(
+                    { postRe &&  postRe.length < 1 && <p>Loading . . . </p> }
+                    { postRe &&  postRe.slice(indexOfFirstPost, indexOfLastPost).map((data,i)=>(
                              <Content key={i} 
                                     img={data.image_url} 
                                     id={data.mal_id} 
@@ -29,6 +42,9 @@ function Recomended() {
                             />
                     ))}
             </div>
+            
+            <PaginationFix setCurrentPage={setCurrentPage} postsPerPage={postsPerPage} post={postRe} currentPage={currentPage} />
+            
            
         </div>
     )

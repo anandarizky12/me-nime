@@ -1,8 +1,27 @@
 HTML{
-    height: 100vh;
+    height: 90vh;
    background: rgb(59, 59, 59);
 }
 
 .content{
     margin-left: 250px;
+    height:93vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
+
+.content::-webkit-scrollbar {
+    width: 7px;               /* width of the entire scrollbar */
+    box-sizing: unset;
+  }
+  
+  .content::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0);        /* color of the tracking area */
+    
+  }
+  
+  .content::-webkit-scrollbar-thumb {
+    background-color: rgba(29, 29, 29, 0.521);    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 10px solid rgba(8, 5, 0, 0);  /* creates padding around scroll thumb */
+  }
