@@ -36,3 +36,9 @@
     height: 12px;
     border-radius: 50%;
 }
+.Top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}

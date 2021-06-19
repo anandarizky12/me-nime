@@ -2,19 +2,44 @@ import React, { useEffect, useState } from 'react'
 import { getPosts } from '../../actions/index';
 import {useDispatch,useSelector} from 'react-redux';
 import PaginationFix from '../Pagination/Pagination';
+import Filter from '../FIlter/Filter';
 import Content from './Content';
 import './style.css'
 
 function TopRating() {
+
+    const [type,settype]=useState({
+        type: 'All',
+    });
+    const [postsdata,setpostsdata]=useState([]);
     //get data from store
     const dispatch = useDispatch();
-    useEffect(()=>{
-        dispatch(getPosts('top/anime'))
-    },[])
-    const posts = useSelector(state=>state.posts) 
-    const newpost = posts.top
 
-    console.info(newpost)
+    useEffect(()=>{
+        dispatch(getPosts('top/anime'));
+       
+    },[])
+
+
+    const posts =  useSelector(state=>state.posts.top);
+
+
+    async function Data(){
+        const data = await posts
+        const filteredData = await data.filter(data=>{
+            if(type.type == "All") return data
+            return data.type == type.type
+        })
+        setpostsdata(filteredData);
+    }
+    
+    //call the function to get data
+    useEffect(()=>{
+        if(posts){
+            Data()
+        }
+       },[posts,type]);
+
     return (
         //end_data
         //episodes
@@ -25,9 +50,12 @@ function TopRating() {
         //title
         //type
         <div className="container-toprating-master">
-            <p className="toprating">Top Rating Anime</p>
-            <input type="d" />
-            {newpost && newpost.map((data,i)=>(
+            <div className="Top">
+                    <p className="toprating">Top Rating Anime</p>
+                    <Filter type={type} set={settype}  />
+            </div>
+          
+            {postsdata && postsdata.map((data,i)=>(
                 <Content title={data.title}
                          img={data.image_url}
                          rating={data.score}

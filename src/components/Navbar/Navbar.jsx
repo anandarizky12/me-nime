@@ -24,7 +24,7 @@ function Navbar() {
         searchPosts(search)
     }, [search]);
   
-    console.log(searchResult)
+  
     return (
         <div className="navbar">
                     

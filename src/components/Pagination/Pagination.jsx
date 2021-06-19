@@ -13,13 +13,12 @@ function PaginationFix({setCurrentPage, postsPerPage, post, currentPage}) {
     return (
         <div className="Pagination" >
                 {post &&
-
                     <Pagination 
                         // className={classes.root}
                         count={post.length / postsPerPage} 
                         defaultPage={1} 
                         color={'textprimary'}
-                        color={'secondary'}
+                        // color={'secondary'}
                         boundaryCount={3} 
                         page={currentPage} 
                         onChange={handleChange} 
