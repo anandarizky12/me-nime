@@ -11,8 +11,8 @@ const content=[
     },
     {
         id:2,
-        title:"Trending",
-        link:'Trending',
+        title:"Top Rating",
+        link:"TopRating"
     },
     {
         id:3,
@@ -21,8 +21,8 @@ const content=[
     },
     {
         id:4,
-        title:"Top Rating",
-        link:"TopRating"
+        title:"Upcoming",
+        link:'Upcoming',
     }
 ]
 export default content;

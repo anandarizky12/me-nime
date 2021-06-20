@@ -4,7 +4,10 @@ import Navbar from './components/Navbar/Navbar'
 import './App.css';
 import Recomended  from './components/Recomended/Recomended';
 import TopRating  from './components/Top-Rating/Top-Rating';
-
+import Home from './components/Home/Home'
+import Upcoming from './components/Upcoming/Upcoming';
+import MoreInfo from './components/MoreInfo/MoreInfo';
+import SearchResult from './components/SearchResult/SearchResult';
 
 
 function App() {
@@ -17,7 +20,7 @@ function App() {
                     <Switch>
                         <Route exact path ="/">
                                 {/* <Recomended/> */}
-                                <p>hello</p>
+                                <Home/>
                         </Route>
                         <Route exact path ="/Recomended">
                                 <Recomended/>
@@ -25,6 +28,11 @@ function App() {
                         <Route exact path ="/TopRating">
                                 <TopRating/>
                         </Route>
+                        <Route exact path ="/Upcoming">
+                                <Upcoming/>
+                        </Route>
+                        <Route exact path ="/Details/:id" component={MoreInfo}/>
+                        <Route exact path ="/Search/:name" component={SearchResult}/>
 
                     </Switch>
                 </div>

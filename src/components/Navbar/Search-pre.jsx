@@ -1,6 +1,8 @@
-import React from 'react'
-import './Navbar.css'
-function Searchpre({img,title,score,rated,date}) {
+import React from 'react';
+import {Link } from 'react-router-dom';
+import { createBrowserHistory } from 'history';
+import './Navbar.css';
+function Searchpre({img,title,score,rated,date, id, setsearchResult}) {
 
     function threedot(title,max){
         if(title.split('').length > max){
@@ -8,18 +10,26 @@ function Searchpre({img,title,score,rated,date}) {
         }
         return title
     }
+    const history=createBrowserHistory();
+
+    function Reload(){
+        setsearchResult([])
+    }
 
     return (
-        <div className="ctn">
-            <img src={img} alt="" />
-            <div className="flex-search">
-                    <p>{threedot(title,35)}</p>
-                    <p> ({rated} - {date.slice(0,4)})</p>
-                    <p>⭐{score}</p>
-            </div>
-          
-        
-        </div>
+        <Link to={`/Details/${id}`} >    
+                <div onClick={()=>Reload()} className="ctn">
+                    
+                            <img src={img} alt="" />
+                            <div className="flex-search">
+                                    <p>{threedot(title,35)}</p>
+                                    {date &&   <p> ({rated} - {date.slice(0,4)})</p>}
+                                
+                                    <p>⭐{score}</p>
+                            </div>
+                </div>
+         </Link>
+     
     )
 }
 

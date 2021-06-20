@@ -9,7 +9,7 @@ function Recomended() {
 
     const [postsPerPage] = useState(10);
     const [currentPage, setCurrentPage] = useState(1);
-
+  
     //get data from store
     const dispatch = useDispatch();
 
@@ -31,7 +31,7 @@ function Recomended() {
         <div className='container-recomended-master'>
             <p className="recomended">Recomended Anime</p>
             <div className="recomended-container">
-                    { postRe &&  postRe.length == 0 && <p>Loading . . . </p> }
+                    { !postRe && <p>Loading . . . </p> }
                     { postRe &&  postRe.slice(indexOfFirstPost, indexOfLastPost).map((data,i)=>(
                              <Content key={i} 
                                     img={data.image_url} 

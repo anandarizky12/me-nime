@@ -11,6 +11,7 @@ function Navbar() {
 
     const [search,setsearch] = useState('');
     const [searchResult,setsearchResult]= useState([]);
+    const [loading,setloading]= useState(true);
     
     const url = 'https://api.jikan.moe/v3';
 
@@ -18,13 +19,23 @@ function Navbar() {
    
     useEffect(() => {
 
-        const searchPosts = (searchName) => axios.get(`${url}/search/anime?q=${searchName}`)
-                .then(res=>setsearchResult(res.data.results))
-        ;
-        searchPosts(search)
+        const searchPosts = (searchName) => {
+                try{
+                    axios.get(`${url}/search/anime?q=${searchName}`)
+                    .then(res=>setsearchResult(res.data.results));
+
+                    if(searchResult){
+                        setloading(false)
+                    }
+                }
+                catch(error){
+                    alert(error)
+                }
+            };
+        searchPosts(search);
     }, [search]);
   
-  
+    console.log(loading,searchResult)
     return (
         <div className="navbar">
                     
@@ -41,23 +52,23 @@ function Navbar() {
                             {search.length > 0 &&
                                 <>
                                  <div className="search-r">
-                                        {searchResult ? searchResult.slice(0,5).map(data=>(
-                                            <Searchpre img={data.image_url} rated={data.rated} date={data.start_date} title={data.title} score={data.score}  />
-                                        ))
-                                    :
-                                    <p>Searching . . . </p>
-                                    
-                                    }
+                                        {loading && <p>Search . . .</p>}
+                                        {searchResult  && searchResult.slice(0,5).map(data=>(
+                                            <Searchpre img={data.image_url} 
+                                                       rated={data.rated} 
+                                                       date={data.start_date} 
+                                                       title={data.title} 
+                                                       id={data.mal_id}
+                                                       score={data.score} 
+                                                       setsearchResult={setsearch}
+                                                       />
+                                        ))}
                                           <p className="seeall">See All Result</p>
 
                                  </div>
                                  <XIcon onClick={()=>setsearch('')} className="search-logo"/>
-                                 </>
-                                
-                               
-                               
+                                 </>  
                             }
-                          
                            
                         </div>
                         <div className="User">

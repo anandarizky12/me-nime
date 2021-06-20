@@ -6,12 +6,15 @@ import Filter from '../FIlter/Filter';
 import Content from './Content';
 import './style.css'
 
+
+
 function TopRating() {
 
     const [type,settype]=useState({
         type: 'All',
     });
     const [postsdata,setpostsdata]=useState([]);
+    const [loading,setloading]=useState(true)
     //get data from store
     const dispatch = useDispatch();
 
@@ -30,6 +33,7 @@ function TopRating() {
             if(type.type == "All") return data
             return data.type == type.type
         })
+        setloading(false)
         setpostsdata(filteredData);
     }
     
@@ -39,22 +43,15 @@ function TopRating() {
             Data()
         }
        },[posts,type]);
-
+   
     return (
-        //end_data
-        //episodes
-        //image_url
-        //rank
-        //score
-        //start_date
-        //title
-        //type
+
         <div className="container-toprating-master">
             <div className="Top">
                     <p className="toprating">Top Rating Anime</p>
                     <Filter type={type} set={settype}  />
             </div>
-          
+            {loading && <p>Loading . . . </p>}
             {postsdata && postsdata.map((data,i)=>(
                 <Content title={data.title}
                          img={data.image_url}
@@ -62,6 +59,7 @@ function TopRating() {
                          startDate={data.start_date}
                          episodes={data.episodes}
                          type={data.type}
+                         id={data.mal_id}
                 />
             ))}
         </div>

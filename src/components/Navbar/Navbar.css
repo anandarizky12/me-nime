@@ -99,7 +99,7 @@ input::placeholder{
 .ctn{
    padding: 5px;
    display: flex;
-   
+   z-index: 100;
 }
 .seeall{
     padding-top: 5px;

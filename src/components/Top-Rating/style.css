@@ -16,13 +16,11 @@
     font-size: 14px;
 }
 .content-top img{
-    width: 200px;
-    height: 280px;
+    width: 130px;
+    height: 180px;
     border-radius: 2px;
 }
-.imgNrating{
-    position: relative;
-}
+
 .rating{
     display: flex;
     justify-content: center;
