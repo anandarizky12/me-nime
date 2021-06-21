@@ -118,3 +118,7 @@ input::placeholder{
     background-color: rgba(247, 77, 77, 0.281);
     transition: all ease 0.5s;
 }
+.flex-search{
+    color: white;
+    text-decoration: none;
+}

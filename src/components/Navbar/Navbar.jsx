@@ -5,14 +5,15 @@ import Searchpre from './Search-pre';
 import {SearchIcon, XIcon} from  '@heroicons/react/solid'
 import LeftNav from '../Left-nav/LeftNav';
 import axios from 'axios';
-
+import { useHistory } from "react-router-dom";
 
 function Navbar() {
 
     const [search,setsearch] = useState('');
     const [searchResult,setsearchResult]= useState([]);
     const [loading,setloading]= useState(true);
-    
+
+    const history = useHistory();
     const url = 'https://api.jikan.moe/v3';
 
     
@@ -35,7 +36,13 @@ function Navbar() {
         searchPosts(search);
     }, [search]);
   
-    console.log(loading,searchResult)
+    function onSubmit(e){
+        e.preventDefault();
+        history.push(`/Search/${search}`);
+        setsearch('')
+
+    }
+
     return (
         <div className="navbar">
                     
@@ -46,7 +53,7 @@ function Navbar() {
                             <LeftNav/>
                     </div>
                     <div className="for-searchandusername">
-                        <div className="Search">
+                        <form onSubmit={(e)=>onSubmit(e)} className="Search">
                             <SearchIcon className="search-logo" />
                             <input value={search} onChange={(e)=>setsearch(e.target.value)} type="text" placeholder="Search Anime" /> 
                             {search.length > 0 &&
@@ -63,14 +70,14 @@ function Navbar() {
                                                        setsearchResult={setsearch}
                                                        />
                                         ))}
-                                          <p className="seeall">See All Result</p>
+                                          <p onClick={(e=>onSubmit(e))} className="seeall">See All Result</p>
 
                                  </div>
                                  <XIcon onClick={()=>setsearch('')} className="search-logo"/>
                                  </>  
                             }
                            
-                        </div>
+                        </form>
                         <div className="User">
                             <p>Ahmed</p>
                             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRu80qW9PfZFE4ZarfdaMOCSTRSb47R15MRQ&usqp=CAU" alt="" />

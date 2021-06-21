@@ -1,4 +1,4 @@
-.toprating{
+.searchHeader{
     color: white;
     font-size: 25px;
     margin-top: 40px;
@@ -6,7 +6,7 @@
     font-weight: 200;
 }
 
-.container-toprating-master{
+.searchresult-container{
     margin-left: 60px;
 }
 

@@ -10,7 +10,7 @@ function Content({title, img, rating, episodes, type, id}) {
                         <div className="imgNrating">
                             <img src={img} alt="" /> 
                         </div> 
-                        <div className="">
+                        <div className="content-text">
                                 <p>{title}</p>
                                 <p>{rating} ⭐</p>
                                 <p>{type} ({episodes}  Eps)</p>

@@ -1,7 +1,8 @@
 import React from 'react';
 import {Link } from 'react-router-dom';
-import { createBrowserHistory } from 'history';
 import './Navbar.css';
+
+
 function Searchpre({img,title,score,rated,date, id, setsearchResult}) {
 
     function threedot(title,max){
@@ -10,7 +11,7 @@ function Searchpre({img,title,score,rated,date, id, setsearchResult}) {
         }
         return title
     }
-    const history=createBrowserHistory();
+
 
     function Reload(){
         setsearchResult([])
