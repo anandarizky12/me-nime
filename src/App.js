@@ -8,7 +8,7 @@ import Home from './components/Home/Home'
 import Upcoming from './components/Upcoming/Upcoming';
 import MoreInfo from './components/MoreInfo/MoreInfo';
 import SearchResult from './components/SearchResult/SearchResult';
-
+import MostPopular from './components/MostPopular/Popular'
 
 function App() {
 
@@ -24,6 +24,9 @@ function App() {
                         </Route>
                         <Route exact path ="/Recomended">
                                 <Recomended/>
+                        </Route>
+                        <Route exact path ="/MostPopular">
+                                <MostPopular/>
                         </Route>
                         <Route exact path ="/TopRating">
                                 <TopRating/>

@@ -6,8 +6,8 @@ const content=[
     },
     {
         id:1,
-        title:"New Release",
-        link:'NewRelease',
+        title:"Most Popular",
+        link:'MostPopular',
     },
     {
         id:2,

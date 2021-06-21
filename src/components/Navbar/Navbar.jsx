@@ -79,8 +79,8 @@ function Navbar() {
                            
                         </form>
                         <div className="User">
-                            <p>Ahmed</p>
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRu80qW9PfZFE4ZarfdaMOCSTRSb47R15MRQ&usqp=CAU" alt="" />
+                            <p>Jikan API</p>
+                            <img src="https://jikan.moe/assets/images/logo/jikan.logo.png" alt="" />
                         </div>
                     </div>
         </div>

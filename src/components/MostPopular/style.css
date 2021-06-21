@@ -1,0 +1,49 @@
+.popularity{
+    color: white;
+    font-size: 25px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-weight: 200;
+}
+
+.container-popularity-master{
+    margin-left: 60px;
+    color: white;
+}
+
+.content-popularity{
+    display: flex;
+    margin-bottom: 10px;
+    color: white;
+    font-size: 14px;
+
+}
+
+.content-text{
+    color: white;
+}
+.content-popularity img{
+    width: 130px;
+    height: 180px;
+    border-radius: 2px;
+}
+
+.rating{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background: rgb(59, 59, 59);
+    padding: 10px;
+    width: 12px;
+    font-size: 10px;
+    font-weight: 700;
+    height: 12px;
+    border-radius: 50%;
+}
+.popularity{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
