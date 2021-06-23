@@ -3,8 +3,6 @@
 .container-home{
         margin-left: 60px;
         width: 100%;
-        
-  
 }
 
 .home-title{
@@ -33,8 +31,8 @@
         text-decoration: underline;
 }
 .for-title{
-        height: 80px;
         overflow: hidden;
+    
 }
 .random-anime{
         width: 100%;
@@ -50,8 +48,8 @@
 }
 .grid{
         display: grid;
-        grid-template-columns: auto  auto  auto;
-       
+        grid-template-columns: auto  auto  auto;    
+      
 }
 .small{
         background: rgba(0, 0, 0, 0.336);
@@ -84,3 +82,132 @@
 .intro{
         font-size: 25px;
 }
+
+
+@media screen and (max-width:877px) {
+        .container-home{
+                margin-left: 0px;
+                width: 100%;
+              
+        }
+        .more{
+                margin-top: -10px;
+                width: 70%;
+                margin-left: 0px;
+        }
+    
+        .random-anime-container{
+                display: inline;
+              
+        }
+     
+        .title{
+                font-family:'Teko', sans-serif ;
+                font-size: 50px;
+        }
+        .home-title{
+   
+                color: white;
+                font-size: 25px;
+                margin-top: 40px;
+                margin-bottom: 40px;
+                font-weight: 300;
+                font-size: 30px;   
+        }
+        .home-title strong{
+                color: rgb(255, 44, 44);
+        }
+
+        .intro{
+                font-size: 17px;
+        }
+        .random-anime-container img{
+                height: 250px;
+        }
+        .small{
+                background: rgba(27, 27, 27, 0.336);
+                padding: 8px;   
+                color: rgb(218, 218, 218);
+                border-radius: 5px;
+                text-align: center;
+                margin-bottom: 20px;
+        }
+        h4{
+                font-size: 10px;
+        }
+        .random-anime-container img{
+                max-width: 200px;
+        }
+}
+
+
+
+@media screen and (max-width:537px){
+        .container-home{
+                margin-left: 0px;
+                width: 100%;
+             
+              
+        }
+        .more{
+                margin-top: -10px;
+                width: 70%;
+                margin-left: 0px;
+        }
+    
+        .random-anime-container{
+                display: inline;
+              
+        }
+        .title{
+                font-family:'Teko', sans-serif ;
+                font-size: 20px;
+                font-weight: 100;
+                letter-spacing: 2px;
+                margin-top: 8px;
+        }
+        .home-title{
+   
+                color: white;
+                font-size: 20px;
+                margin-top: 40px;
+                margin-bottom: 40px;
+                font-weight: 300;
+        }
+        .home-title strong{
+                color: rgb(255, 44, 44);
+        }
+
+        .intro{
+                font-size: 12px;
+        }
+        .random-anime-container img{
+                height: 250px;
+        }
+        .small{
+                background: rgba(27, 27, 27, 0.336);
+                padding: 8px;   
+                color: rgb(218, 218, 218);
+                border-radius: 5px;
+                text-align: center;
+                margin-bottom: 20px;
+        }
+        h4{
+                font-size: 10px;
+        }
+        .rank{
+                color: white;
+                background: rgba(90, 89, 89, 0.582);
+                width: 6rem;
+                border-radius: 5px;
+                display: flex;
+                align-items: flex-end;
+                height: 40px;
+                padding: 5px;
+                font-size: 10px;
+        }
+        .rank  h2{
+                font-size: 40px;
+        }
+
+    }

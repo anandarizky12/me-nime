@@ -13,3 +13,16 @@
     
     
 }
+
+@media screen and (max-width:537px){
+        .container-upcoming{
+                margin-left: 10px;
+          
+        }
+        
+        .upcoming img{
+                width: 140px;
+                height: 200px;
+        }
+       
+      }

@@ -1,5 +1,8 @@
 import React from 'react'
 import './style.css'
+import {Link } from 'react-router-dom';
+
+
 function Content({key, img, id, title, url}) {
     
     function threedot(title,max){
@@ -11,8 +14,10 @@ function Content({key, img, id, title, url}) {
     
     return (
         <div className="recomended-content">
-            <img src={img} alt="" />
-            <p>{threedot(title,25)}</p>
+            <Link to={`/Details/${id}`} >   
+                <img src={img} alt="" />
+                <p>{threedot(title,25)}</p>
+            </Link>
         </div>
     )
 }

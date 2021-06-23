@@ -9,7 +9,10 @@ function LeftNav() {
             <div className="main-left">
                 {content.map(((data,i)=>(
                        <NavLink key={i} activeClassName="each-nav-title active" className="each-nav-title" exact to={`/${data.link}`} >
-                                <p>{data.title}</p>
+                                <div className="title-Navside">
+                                    {data.icon}
+                                    <p>{data.title}</p>
+                                </div>   
                         </NavLink>
                 )))}
             </div>

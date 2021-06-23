@@ -48,7 +48,7 @@ function TopRating() {
 
         <div className="container-popularity-master">
             <div className="popularity">
-                    <p className="popularity">Most Popular Anime</p>
+                    <p className="">Most Popular Anime</p>
                     <Filter type={type} set={settype}  />
             </div>
             {loading && <p>Loading . . . </p>}

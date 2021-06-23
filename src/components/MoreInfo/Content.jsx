@@ -43,7 +43,7 @@ function Content({img, trailer, title, synopsis, score, status, more,
                 url={trailer}  
                 light={true}
                 width='100%'
-                height='400px'
+                height='350px'
                 />
 
         

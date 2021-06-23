@@ -18,8 +18,9 @@ function PaginationFix({setCurrentPage, postsPerPage, post, currentPage}) {
                         count={post.length / postsPerPage} 
                         defaultPage={1} 
                         color={'textprimary'}
+                        size="small"
                         // color={'secondary'}
-                        boundaryCount={3} 
+                        boundaryCount={1} 
                         page={currentPage} 
                         onChange={handleChange} 
                     />

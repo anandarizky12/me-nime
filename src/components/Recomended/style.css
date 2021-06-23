@@ -38,3 +38,24 @@
 .Pagenation{
     color: rgb(255, 255, 255);
 }
+
+
+
+@media screen and (max-width:537px){
+    .container-recomended-master{
+        margin-left: 0px;
+    }
+  
+    .recomended-content{
+        width: 120px;
+        margin: 10px;
+    }
+    .recomended-content img {
+        height: 200px;
+        box-shadow: 5px 5px  15px 5px rgba(0, 0, 0, 0.226)   ;
+        min-width: 138px;
+        max-width: 138px;
+        border-radius: 3px;
+    }
+   
+  }

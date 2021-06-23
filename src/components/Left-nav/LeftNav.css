@@ -48,3 +48,69 @@
     width: 100%;
    
 }
+.HomeIcon{
+    height: 25px;
+    margin-right: 20px;
+}
+
+.title-Navside{
+    justify-content: space-around;
+    display: flex;
+    margin:10px;
+  
+
+}
+
+
+
+@media screen and (max-width:537px){
+    .Left-nav{
+        display: flex;
+        position:fixed;
+        width: 100%;
+        min-height: 20px;
+        max-height: 50px;
+        background: rgb(46, 46, 46);
+        color: rgb(153, 153, 153);
+        font-weight: 300;
+        box-sizing: border-box;
+        bottom: 0;
+      
+    }
+    .center-line{
+        display: none;
+      
+    }
+    .main-left{
+        display: flex;
+        flex-direction: row;
+        margin-top: 0;
+    }
+    .title-Navside{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      
+    }
+ 
+    .HomeIcon{
+        height: 22px;
+        margin: 0px;
+    }
+    .each-nav-title{
+        width: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5px;
+    }
+    .each-nav-title.active{
+      
+            background: rgba(59, 59, 59, 0);
+            cursor: pointer;
+            color:  rgb(235, 69, 69);
+            font-weight: 200;
+         
+      
+    }
+}

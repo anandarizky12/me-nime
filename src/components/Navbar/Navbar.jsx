@@ -54,8 +54,11 @@ function Navbar() {
                     </div>
                     <div className="for-searchandusername">
                         <form onSubmit={(e)=>onSubmit(e)} className="Search">
-                            <SearchIcon className="search-logo" />
-                            <input value={search} onChange={(e)=>setsearch(e.target.value)} type="text" placeholder="Search Anime" /> 
+                            <div className="search-input-container">
+                                <SearchIcon className="search-logo" />
+                                <input value={search} onChange={(e)=>setsearch(e.target.value)} type="text" placeholder="Search Anime" /> 
+                            </div>
+                        
                             {search.length > 0 &&
                                 <>
                                  <div className="search-r">

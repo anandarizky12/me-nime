@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { getPosts } from '../../actions/index';
 import {useDispatch,useSelector} from 'react-redux';
-import PaginationFix from '../Pagination/Pagination';
 import Filter from '../FIlter/Filter';
 import Content from './Content';
 import './style.css'

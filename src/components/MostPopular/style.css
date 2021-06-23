@@ -1,10 +1,3 @@
-.popularity{
-    color: white;
-    font-size: 25px;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    font-weight: 200;
-}
 
 .container-popularity-master{
     margin-left: 60px;
@@ -45,5 +38,35 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     
 }
+
+
+@media screen and (max-width:537px){
+  
+    .container-popularity-master{
+        margin: 0px;
+        padding: 0px;
+    }
+    .popularity{
+        display: flex;
+        flex-direction: row;
+        margin-top: 30px;
+    
+    }
+    .popularity p {
+       font-size: 15px;
+    
+        
+    }
+    .insideLink{
+  
+    display: flex;
+    flex-direction: row;
+    }
+    .content-text{
+        margin-left: 5px;
+    }
+    
+  }

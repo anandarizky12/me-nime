@@ -46,3 +46,24 @@
     align-items: center;
     
 }
+
+@media screen and (max-width:537px){
+  
+    .container-toprating-master{
+        margin: 0px;
+        padding: 0px;
+    }
+    .Top{
+        margin-top: 30px;
+    }
+    .toprating {
+       font-size: 15px;
+    
+        
+    }
+
+    .content-text{
+        margin-left: 5px;
+    }
+
+  }

@@ -13,7 +13,7 @@ import MostPopular from './components/MostPopular/Popular'
 function App() {
 
     return (
-        <div>
+        <div className="App">
             <Router>
                 <Navbar/>
                 <div className="content">

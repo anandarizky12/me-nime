@@ -6,7 +6,7 @@ import {Link } from 'react-router-dom';
 function Content({title, img, rating, episodes, type, id}) {
     return (
         <div className="content-top">  
-                  <Link to={`/Details/${id}`} >    
+                  <Link className="insideLink" to={`/Details/${id}`} >    
                         <div className="imgNrating">
                             <img src={img} alt="" /> 
                         </div> 
